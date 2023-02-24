@@ -1,0 +1,48 @@
+﻿int[] GetSumPositiveNegativeElem (int[] arr)
+{
+    int sumNegative = 0;
+    int sumPositive = 0;
+
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if(arr[i] < 0) sumNegative += arr[i];
+        else sumPositive += arr[i];
+    }
+
+    return new int[]{sumNegative, sumPositive};
+}
+int GetSumNegativeElem (int[] arr)
+{
+    int sum = 0;
+
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if(arr[i] < 0) sum += arr[i];
+    }
+
+    return sum;
+}
+
+int GetSumPositiveElem (int[] arr)
+{
+    int sum = 0;
+
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if(arr[i] > 0) sum += arr[i];
+    }
+
+    return sum;
+}
+int[] array = CreateArrayRndInt(12, -9, 9);
+PrintArray(array);
+Console.WriteLine();
+
+int[] sumPositiveNegativeElem = GetSumPositiveNegativeElem(array);
+Console.WriteLine($"Сумма положительных чисел = {sumPositiveNegativeElem[1]}");
+Console.WriteLine($"Сумма отрицательных чисел = {sumPositiveNegativeElem[0]}");
+
+int sumNegativeElem = GetSumNegativeElem(array);
+int sumPositiveElem = GetSumPositiveElem(array);
+Console.WriteLine($"Сумма положительных чисел = {sumPositiveElem}");
+Console.WriteLine($"Сумма отрицательных чисел = {sumNegativeElem}");
