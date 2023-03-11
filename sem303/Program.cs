@@ -70,6 +70,8 @@ Console.WriteLine(Quart(x, y));
 // Напишите программу, которая принимает на вход число (N)  
 // и выдаёт квадраты чисел от 1 до N.
 
+
+/*
 void Quart(int x)
 {
     int current = 1;
@@ -83,5 +85,25 @@ void Quart(int x)
 Console.Write("Inpet number: ");
 int n = Convert.ToInt32(Console.ReadLine());
 Quart(n);
+*/
 
+// Напишите программу, которая принимает на вход число (А)  
+// и выдаёт сумму чисел от 1 до А.
+
+
+/*
+void Sum(int x)
+{
+    int current = 1;
+    while(current <= x)
+    {
+        int sum = current + current;
+        Console.Write(sum + " ");
+        current++;
+    }
+}
+Console.Write("Inpet number: ");
+int n = Convert.ToInt32(Console.ReadLine());
+Sum(n);
+*/
 
